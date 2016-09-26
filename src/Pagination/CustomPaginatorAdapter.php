@@ -3,6 +3,7 @@
 namespace Dingo\Api\Pagination;
 
 use Illuminate\Pagination\Paginator;
+use League\Fractal\Pagination\PaginatorInterface;
 
 /**
  * Created by PhpStorm.
@@ -37,7 +38,7 @@ class CustomPaginatorAdapter implements PaginatorInterface {
      */
     public function getCurrentPage()
     {
-        return $this->paginator->currentPage();
+        return $this->paginator->getCurrentPage();
     }
 
     /**
@@ -47,7 +48,7 @@ class CustomPaginatorAdapter implements PaginatorInterface {
      */
     public function getLastPage()
     {
-        return $this->paginator->lastPage();
+        return $this->paginator->getLastPage();
     }
 
     /**
@@ -57,7 +58,7 @@ class CustomPaginatorAdapter implements PaginatorInterface {
      */
     public function getTotal()
     {
-        return $this->paginator->total();
+        return $this->paginator->getTotal();
     }
 
     /**
@@ -77,7 +78,7 @@ class CustomPaginatorAdapter implements PaginatorInterface {
      */
     public function getPerPage()
     {
-        return $this->paginator->perPage();
+        return $this->paginator->getPerPage();
     }
 
     /**
@@ -89,7 +90,7 @@ class CustomPaginatorAdapter implements PaginatorInterface {
      */
     public function getUrl($page)
     {
-        return $this->paginator->url($page);
+        return $this->paginator->getUrl($page);
     }
 
     /**
