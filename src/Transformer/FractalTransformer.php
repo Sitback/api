@@ -2,6 +2,7 @@
 
 namespace Dingo\Api\Transformer;
 
+use Dingo\Api\Pagination\CustomPaginatorAdapter;
 use Illuminate\Http\Request;
 use League\Fractal\Manager as Fractal;
 use League\Fractal\Resource\Item as FractalItem;
@@ -108,7 +109,7 @@ class FractalTransformer implements TransformerInterface
      */
     protected function createPaginatorAdapter(IlluminatePaginator $paginator)
     {
-        return new IlluminatePaginatorAdapter($paginator);
+        return new CustomPaginatorAdapter($paginator);
     }
 
     /**
